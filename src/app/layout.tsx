@@ -41,7 +41,23 @@ export const metadata: Metadata = {
     title: "Music & Smiles",
     description:
       "Every child deserves a place where they feel accepted, included, and celebrated.",
-    images: ["/images/anna-piano.png"],
+    type: "website",
+    url: "https://musicandsmiles.fishtownweb.com",
+    images: [
+      {
+        url: "/images/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Music & Smiles — Play. Connect. Belong.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Music & Smiles",
+    description:
+      "Every child deserves a place where they feel accepted, included, and celebrated.",
+    images: ["/images/og.png"],
   },
   icons: {
     icon: [

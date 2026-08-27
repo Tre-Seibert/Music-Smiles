@@ -1,26 +1,216 @@
 @import "tailwindcss";
 
+/* Brand kit — pulled from the logo, not a corporate navy.
+   Primary: teal  |  Energy: pink  |  Warmth: orange  |  Play: green  |  Accent: purple
+   Ink: deep teal (readable, still logo-family) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy: #15565f;
+  --navy-deep: #0e3f46;
+  --teal: #009ca8;
+  --teal-dark: #007a84;
+  --pink: #e42460;
+  --pink-dark: #c41d52;
+  --orange: #f08400;
+  --green: #6cb430;
+  --green-dark: #589428;
+  --purple: #543084;
+  --cream: #fff7f0;
+  --sand: #f8ebe0;
+  --paper: #ffffff;
+  --ink: #1d3a3e;
+  --muted: #5a6e72;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-teal: var(--teal);
+  --color-teal-dark: var(--teal-dark);
+  --color-pink: var(--pink);
+  --color-pink-dark: var(--pink-dark);
+  --color-orange: var(--orange);
+  --color-green: var(--green);
+  --color-green-dark: var(--green-dark);
+  --color-purple: var(--purple);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-nunito);
+  --font-display: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--pink) 28%, white);
+}
+
+.font-display {
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: var(--teal);
+  color: white;
+  padding: 0.6rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.smile-rule {
+  height: 3px;
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    var(--teal),
+    var(--pink),
+    var(--orange),
+    var(--green),
+    var(--purple)
+  );
+  border-radius: 999px;
+}
+
+.blob {
+  border-radius: 42% 58% 56% 44% / 42% 42% 58% 58%;
+  animation: blob-morph 12s ease-in-out infinite;
+}
+
+.brand-gradient {
+  background: linear-gradient(120deg, var(--teal), var(--green) 40%, var(--orange) 70%, var(--pink));
+  background-size: 220% 220%;
+  animation: gradient-shift 10s ease infinite;
+}
+
+.text-brand-gradient {
+  background: linear-gradient(100deg, var(--teal) 10%, var(--purple) 50%, var(--pink) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes blob-morph {
+  0%,
+  100% {
+    border-radius: 42% 58% 56% 44% / 42% 42% 58% 58%;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    border-radius: 58% 42% 38% 62% / 48% 62% 38% 52%;
+    transform: rotate(8deg) scale(1.06);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float-note {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(8deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.float-note {
+  animation: float-note 5s ease-in-out infinite;
+}
+
+.float-note-slow {
+  animation: float-note 7s ease-in-out infinite 0.8s;
+}
+
+.float-note-fast {
+  animation: float-note 4s ease-in-out infinite 0.35s;
+}
+
+.float-note-delay {
+  animation: float-note 6.5s ease-in-out infinite 1.4s;
+}
+
+.marquee-track {
+  animation: marquee 48s linear infinite;
+  will-change: transform;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--d, 0ms);
+}
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+.img-zoom {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .img-zoom {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .blob,
+  .brand-gradient,
+  .float-note,
+  .float-note-slow,
+  .float-note-fast,
+  .float-note-delay,
+  .marquee-track,
+  .img-zoom {
+    animation: none;
+    transition: none;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
 }

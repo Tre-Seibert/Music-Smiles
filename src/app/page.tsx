@@ -29,6 +29,8 @@ const programs = [
     color: "text-orange",
     tint: "bg-orange/10",
     image: "/images/drums.jpg",
+    imageClass: "object-top",
+    imageHeight: "aspect-[4/3]",
   },
   {
     title: "Instrument Exploration",
@@ -51,8 +53,8 @@ const programs = [
 export default function HomePage() {
   return (
     <main>
-      <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0">
+      <section className="relative">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-teal/15 blur-3xl" />
           <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-pink/15 blur-3xl" />
           <div className="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-orange/10 blur-3xl" />
@@ -88,11 +90,9 @@ export default function HomePage() {
             <CtaRow size="lg" className="mt-8" />
           </div>
 
-          <div className="relative">
-            <IconEighth className="float-note-fast pointer-events-none absolute -top-3 -left-2 z-10 hidden h-8 w-8 -rotate-12 text-orange/50 sm:block" />
-            <IconNote className="float-note-slow pointer-events-none absolute -right-3 -bottom-2 z-10 hidden h-9 w-9 rotate-12 text-green/45 sm:block" />
-            <div className="blob absolute -inset-4 bg-linear-to-br from-teal/30 via-pink/20 to-orange/20" />
-            <div className="relative overflow-hidden rounded-[2.2rem] shadow-[0_30px_80px_rgba(21,86,95,0.18)]">
+          <div className="relative isolate">
+            <div className="blob absolute -inset-4 -z-10 bg-linear-to-br from-teal/30 via-pink/20 to-orange/20" />
+            <div className="relative z-0 overflow-hidden rounded-[2.2rem] shadow-[0_30px_80px_rgba(21,86,95,0.18)]">
               <Image
                 src="/images/anna-piano.png"
                 alt="Anna Levitskiy, founder of Music & Smiles, at the piano"
@@ -108,6 +108,8 @@ export default function HomePage() {
                 <p className="font-display text-2xl">Anna Levitskiy</p>
               </div>
             </div>
+            <IconEighth className="float-note-fast pointer-events-none absolute -top-3 -left-2 z-20 hidden h-8 w-8 -rotate-12 text-orange/50 sm:block" />
+            <IconNote className="float-note-slow pointer-events-none absolute -right-3 -bottom-2 z-20 hidden h-9 w-9 rotate-12 text-green/45 sm:block" />
           </div>
         </div>
       </section>
@@ -145,12 +147,12 @@ export default function HomePage() {
               data-reveal
               className="group overflow-hidden rounded-[1.8rem] bg-white shadow-[0_16px_50px_rgba(21,86,95,0.08)]"
             >
-              <div className="relative h-44 overflow-hidden">
+              <div className={`relative overflow-hidden ${program.imageHeight ?? "h-44"}`}>
                 <Image
                   src={program.image}
                   alt=""
                   fill
-                  className="img-zoom object-cover"
+                  className={`img-zoom object-cover ${program.imageClass ?? ""}`}
                   sizes="(min-width: 640px) 50vw, 100vw"
                 />
               </div>

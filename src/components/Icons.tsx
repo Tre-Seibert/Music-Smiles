@@ -53,16 +53,17 @@ export function IconHeart({ className }: { className?: string }) {
 
 export function IconNote({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
-      <path d="M18 3v10.2a3.4 3.4 0 1 1-1.7-3V7.2L9 9.1v7.6A3.4 3.4 0 1 1 7.3 14V6.4L18 3Z" />
+    <svg viewBox="-2 -2 28 28" fill="currentColor" className={className} aria-hidden overflow="visible">
+      <path d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.57v9.739a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.206-.03z" />
     </svg>
   );
 }
 
 export function IconEighth({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
-      <path d="M9 16.7A3.1 3.1 0 1 1 6.6 13.9V4.8c2.6 1.5 4.6 3.1 7.4 3.4v2.2c-2.5-.2-4.5-1.3-7-2.5v8.8Z" />
+    <svg viewBox="-2 -2 28 28" fill="currentColor" className={className} aria-hidden overflow="visible">
+      <circle cx="8" cy="17.5" r="3.6" />
+      <path d="M9.4 17.5V4.6c2.9 1.5 5.4 3.3 8.5 3.7v2.6c-2.4-.25-4.4-1.5-6.5-2.75V17.5Z" />
     </svg>
   );
 }

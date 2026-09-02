@@ -206,7 +206,12 @@ export default function GetInvolvedPage() {
                   index === 0 ? "col-span-2 row-span-2 min-h-72" : "min-h-40"
                 }`}
               >
-                <Image src={item.src} alt={item.alt} fill className="object-cover" />
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className={`object-cover ${item.imageClass ?? ""}`}
+                />
                 {item.caption ? (
                   <figcaption className="absolute inset-x-0 bottom-0 bg-linear-to-t from-navy/70 to-transparent p-3 text-sm font-bold">
                     {item.caption}

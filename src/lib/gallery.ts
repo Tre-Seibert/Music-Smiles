@@ -2,6 +2,7 @@ export type GalleryItem = {
   src: string;
   alt: string;
   caption?: string;
+  imageClass?: string;
 };
 
 /**
@@ -23,6 +24,7 @@ export const gallery: GalleryItem[] = [
     src: "/images/drums.jpg",
     alt: "Drumming and rhythm",
     caption: "Drumming & rhythm",
+    imageClass: "object-top",
   },
   {
     src: "/images/dance.jpg",

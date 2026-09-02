@@ -25,17 +25,15 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-2.5 sm:gap-3"
+          className="flex shrink-0 items-center"
+          aria-label="Music & Smiles home"
           onClick={() => setOpen(false)}
         >
           <img
-            src="/images/logo-nav.png"
-            alt=""
-            className="h-12 w-auto max-w-none sm:h-16"
+            src="/images/logo-nav-horizontal.png"
+            alt="Music & Smiles"
+            className="h-12 w-auto max-w-[min(100%,280px)] sm:h-16 sm:max-w-[360px] lg:h-[4.5rem] lg:max-w-[420px]"
           />
-          <span className="font-display text-brand-gradient text-2xl leading-none font-bold whitespace-nowrap sm:text-3xl lg:text-4xl">
-            Music &amp; Smiles
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">

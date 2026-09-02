@@ -20,7 +20,8 @@ const programs = [
     icon: IconMusic,
     color: "text-teal",
     tint: "bg-teal/10",
-    image: "/images/kids-play.jpg",
+    image: "/images/music-play-days.jpg",
+    alt: "Children and teens, including a boy in a wheelchair, playing music with colorful scarves",
   },
   {
     title: "Drumming & Rhythm",
@@ -28,9 +29,8 @@ const programs = [
     icon: IconDrum,
     color: "text-orange",
     tint: "bg-orange/10",
-    image: "/images/drums.jpg",
-    imageClass: "object-top",
-    imageHeight: "aspect-[4/3]",
+    image: "/images/drumming-rhythm.jpg",
+    alt: "Teens playing djembe drums together in a circle",
   },
   {
     title: "Instrument Exploration",
@@ -38,7 +38,8 @@ const programs = [
     icon: IconPiano,
     color: "text-purple",
     tint: "bg-purple/10",
-    image: "/images/instruments.jpg",
+    image: "/images/instrument-exploration.jpg",
+    alt: "Teens exploring keyboard, guitar, xylophone, and drums",
   },
   {
     title: "Friendship & Social Activities",
@@ -46,7 +47,8 @@ const programs = [
     icon: IconHeart,
     color: "text-pink",
     tint: "bg-pink/10",
-    image: "/images/friends.jpg",
+    image: "/images/friendship.jpg",
+    alt: "Teens sitting in a circle stacking their hands together",
   },
 ];
 
@@ -147,12 +149,12 @@ export default function HomePage() {
               data-reveal
               className="group overflow-hidden rounded-[1.8rem] bg-white shadow-[0_16px_50px_rgba(21,86,95,0.08)]"
             >
-              <div className={`relative overflow-hidden ${program.imageHeight ?? "h-44"}`}>
+              <div className="relative h-44 overflow-hidden">
                 <Image
                   src={program.image}
-                  alt=""
+                  alt={program.alt}
                   fill
-                  className={`img-zoom object-cover ${program.imageClass ?? ""}`}
+                  className="img-zoom object-cover"
                   sizes="(min-width: 640px) 50vw, 100vw"
                 />
               </div>
@@ -239,7 +241,7 @@ export default function HomePage() {
 
       <section id="who-we-help" className="relative scroll-mt-32 overflow-hidden">
         <Image
-          src="/images/kids-play.jpg"
+          src="/images/music-play-days.jpg"
           alt=""
           fill
           className="object-cover"

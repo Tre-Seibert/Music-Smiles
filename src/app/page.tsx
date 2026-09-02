@@ -69,9 +69,12 @@ export default function HomePage() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
           <div data-reveal>
             <p className="text-xs font-extrabold tracking-[0.28em] text-teal uppercase">
-              Welcome to Music & Smiles
+              Welcome to
             </p>
-            <h1 className="mt-4 font-display text-4xl leading-[1.08] text-navy sm:text-5xl lg:text-6xl">
+            <p className="text-brand-gradient mt-1 font-display text-4xl leading-none font-bold sm:text-5xl lg:text-6xl">
+              Music &amp; Smiles
+            </p>
+            <h1 className="mt-5 font-display text-4xl leading-[1.08] text-navy sm:text-5xl lg:text-6xl">
               Every child deserves a place where they{" "}
               <span className="text-brand-gradient">belong.</span>
             </h1>
@@ -164,26 +167,15 @@ export default function HomePage() {
       </section>
 
       <section className="relative overflow-hidden bg-sand">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
-          <div>
-            <p className="text-xs font-extrabold tracking-[0.28em] text-orange uppercase">
-              Join the community
-            </p>
+        <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+          <p className="text-xs font-extrabold tracking-[0.28em] text-orange uppercase">
+            Join the community
+          </p>
           <h2 data-reveal className="mt-3 font-display text-4xl text-navy">
-              Whether you’re a family, volunteer, musician, sponsor, or
-              community partner — we’d love to have you.
-            </h2>
-            <CtaRow className="mt-8" />
-          </div>
-          <div className="relative h-72 overflow-hidden rounded-[2rem] sm:h-80">
-            <Image
-              src="/images/together.jpg"
-              alt="People connecting together"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 40vw, 100vw"
-            />
-          </div>
+            Whether you’re a family, volunteer, musician, sponsor, or
+            community partner — we’d love to have you.
+          </h2>
+          <CtaRow className="mt-8 justify-center" />
         </div>
       </section>
 
@@ -222,25 +214,22 @@ export default function HomePage() {
               </p>
               <p>
                 Through volunteering with children and teens with special needs,
-                I discovered something even more meaningful — the incredible
-                joy that comes from friendship, acceptance, and simply having a
-                place where you belong.
+                I discovered something even more meaningful — the joy that
+                comes from friendship, acceptance, and having a place where
+                you belong.
               </p>
               <p>
-                That experience inspired me to create Music & Smiles. I wanted
-                a place where children with special needs could enjoy music,
-                make friends, have fun, and always feel accepted for exactly
-                who they are.
+                That experience inspired me to create Music & Smiles: a place
+                where children and teens can enjoy music, make friends, have
+                fun, and feel accepted for exactly who they are.
               </p>
-              <p className="font-display text-xl text-navy">
+              <p className="text-brand-gradient font-display text-2xl font-bold">
                 Every child deserves a place where they belong.
               </p>
               <p>
                 This is just the beginning, and I hope you’ll be part of our
-                journey as we spread more music, more friendship, and more
-                smiles.
+                journey as we spread more music, friendship, and smiles.
               </p>
-              <p className="font-display text-xl text-pink">— Anna</p>
             </div>
           </div>
         </div>

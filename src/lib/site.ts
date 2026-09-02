@@ -6,7 +6,7 @@ export const site = {
   phoneDisplay: "(215) 876-7382",
   address: "3392 Woodland Circle",
   serviceArea:
-    "Bucks County & Montgomery County, PA — including Newtown, Richboro, Yardley, Langhorne, Southampton, Warminster, Doylestown, Huntingdon Valley, Willow Grove, Abington, Jenkintown, Blue Bell, and surrounding communities.",
+    "Serving families throughout Philadelphia, Bucks and Montgomery Counties, PA, and surrounding communities.",
   social: {
     facebook:
       "https://www.facebook.com/share/1DXrT7r3f2/?mibextid=wwXIfr",

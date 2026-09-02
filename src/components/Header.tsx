@@ -23,12 +23,19 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-navy/8 bg-cream/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5 sm:px-6">
-        <Link href="/" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
+        <Link
+          href="/"
+          className="flex shrink-0 items-center gap-2.5 sm:gap-3"
+          onClick={() => setOpen(false)}
+        >
           <img
             src="/images/logo-nav.png"
-            alt="Music & Smiles"
-            className="h-[4.75rem] w-auto max-w-none sm:h-24"
+            alt=""
+            className="h-12 w-auto max-w-none sm:h-16"
           />
+          <span className="font-display text-brand-gradient text-2xl leading-none font-bold whitespace-nowrap sm:text-3xl lg:text-4xl">
+            Music &amp; Smiles
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">

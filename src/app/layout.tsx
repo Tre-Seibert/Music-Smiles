@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Music & Smiles",
   },
   description:
-    "Joyful, inclusive musical experiences for children and teens with special needs in Bucks County and Montgomery County, PA.",
+    "Joyful, inclusive musical experiences for children and teens with special needs throughout Philadelphia, Bucks and Montgomery Counties, PA.",
   metadataBase: new URL("https://musicandsmiles.fishtownweb.com"),
   robots: {
     index: false,
@@ -91,7 +91,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               email: site.email,
               telephone: site.phone,
               slogan: site.tagline,
-              areaServed: "Bucks County and Montgomery County, Pennsylvania",
+              areaServed: "Philadelphia, Bucks and Montgomery Counties, Pennsylvania",
               url: "https://musicandsmiles.fishtownweb.com",
             }),
           }}

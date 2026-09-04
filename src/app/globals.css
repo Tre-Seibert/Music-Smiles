@@ -43,8 +43,12 @@
 
 html {
   scroll-behavior: smooth;
+  /* Height of the fixed mobile CTA bar: 0.75rem padding twice, a 2rem button,
+     and the 1px top border. Anything anchored to the bottom of the page has to
+     clear this much or the bar sits on top of it. */
+  --cta-bar-h: 3.5rem;
   /* Keep focused fields / in-page anchors clear of the fixed mobile CTA bar. */
-  scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+  scroll-padding-bottom: calc(var(--cta-bar-h) + 2rem + env(safe-area-inset-bottom, 0px));
 }
 
 @media (min-width: 768px) {
@@ -69,7 +73,7 @@ body {
 
 /* Extra footer clearance so the last credit line isn't tucked under the bar. */
 .cta-bar-clearance {
-  padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(var(--cta-bar-h) + 0.75rem + env(safe-area-inset-bottom, 0px));
 }
 
 @media (min-width: 768px) {

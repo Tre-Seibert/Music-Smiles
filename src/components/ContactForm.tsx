@@ -29,10 +29,10 @@ export function ContactForm({ id = "contact-form" }: { id?: string }) {
           from_name: "Music & Smiles website",
           subject: `Music & Smiles contact from ${name}`,
           botcheck,
-          name,
-          email,
+          Name: name,
+          Email: email,
           "I am a": role,
-          message,
+          Message: message,
         }),
       });
 

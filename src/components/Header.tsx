@@ -76,7 +76,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-navy/8 bg-cream px-4 py-4 pb-24 md:pb-4 lg:hidden">
+        <div className="border-t border-navy/8 bg-cream px-4 py-4 lg:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {pages.map((item) => (
               <Link

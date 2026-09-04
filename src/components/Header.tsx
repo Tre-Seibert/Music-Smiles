@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -29,10 +30,14 @@ export function Header() {
           aria-label="Music & Smiles home"
           onClick={() => setOpen(false)}
         >
-          <img
+          <Image
             src="/images/logo-nav-horizontal.png"
             alt="Music & Smiles"
-            className="h-12 w-auto max-w-[min(100%,280px)] sm:h-16 sm:max-w-[360px] lg:h-[4.5rem] lg:max-w-[420px]"
+            width={1536}
+            height={405}
+            priority
+            sizes="(min-width: 1024px) 420px, (min-width: 640px) 360px, 280px"
+            className="h-14 w-auto max-w-[min(100%,300px)] sm:h-[4.5rem] sm:max-w-[400px] lg:h-20 lg:max-w-[460px]"
           />
         </Link>
 
@@ -61,7 +66,7 @@ export function Header() {
 
         <button
           type="button"
-          className="grid h-11 w-11 place-items-center rounded-full border border-navy/10 bg-white text-navy md:hidden"
+          className="grid h-11 w-11 place-items-center rounded-full border border-navy/10 bg-white text-navy lg:hidden"
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
@@ -71,7 +76,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-navy/8 bg-cream px-4 py-4 pb-24 md:hidden">
+        <div className="border-t border-navy/8 bg-cream px-4 py-4 pb-24 md:pb-4 lg:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {pages.map((item) => (
               <Link
@@ -84,7 +89,7 @@ export function Header() {
               </Link>
             ))}
           </nav>
-          <div className="mt-4 grid grid-cols-1 gap-2">
+          <div className="mt-4 grid grid-cols-1 gap-2 md:hidden">
             <CtaButton variant="register" />
             <CtaButton variant="volunteer" />
             <CtaButton variant="donate" />

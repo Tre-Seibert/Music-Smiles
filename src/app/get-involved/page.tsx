@@ -38,7 +38,14 @@ export default function GetInvolvedPage() {
     <main>
       <section className="relative overflow-hidden text-white">
         <div className="absolute inset-0">
-          <Image src="/images/music-lights.jpg" alt="" fill className="object-cover" />
+          <Image
+            src="/images/get-involved-hero.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-linear-to-br from-teal/90 via-green/80 to-orange/70" />
         </div>
         <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24">
@@ -83,9 +90,10 @@ export default function GetInvolvedPage() {
           </div>
           <div className="group relative h-80 overflow-hidden rounded-[2rem] sm:h-[28rem]">
             <Image
-              src="/images/singing.jpg"
-              alt="Sharing music together"
+              src="/images/volunteer-buddy.jpg"
+              alt="A teen volunteer helping a younger child play a tambourine, both laughing"
               fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="img-zoom object-cover"
             />
           </div>
@@ -142,7 +150,7 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
-      <section id="donate" className="mx-auto max-w-6xl scroll-mt-32 px-4 py-16 sm:px-6">
+      <section id="donate" className="mx-auto max-w-6xl scroll-mt-32 px-4 py-16 pb-8 sm:px-6">
         <div className="grid items-start gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <p className="text-xs font-extrabold tracking-[0.28em] text-teal uppercase">
@@ -188,7 +196,7 @@ export default function GetInvolvedPage() {
 
       <section id="gallery" className="scroll-mt-32 bg-linear-to-br from-teal to-green text-white">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <p className="text-xs font-extrabold tracking-[0.28em] text-teal uppercase">
+          <p className="text-xs font-extrabold tracking-[0.28em] text-white uppercase">
             Gallery
           </p>
           <h2 data-reveal className="mt-3 font-display text-4xl">
@@ -223,7 +231,7 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl scroll-mt-32 px-4 py-16 sm:px-6">
+      <section id="contact" className="mx-auto max-w-6xl scroll-mt-32 px-4 py-16 pb-28 sm:px-6 md:pb-16">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
             <p className="text-xs font-extrabold tracking-[0.28em] text-pink uppercase">

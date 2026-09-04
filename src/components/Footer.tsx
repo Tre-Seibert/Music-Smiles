@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { IconFacebook, IconMail } from "./Icons";
@@ -52,9 +53,12 @@ export function Footer() {
     <footer className="bg-linear-to-br from-teal to-teal-dark text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.15fr_0.9fr_0.9fr_1fr]">
         <div>
-          <img
+          <Image
             src="/images/logo-footer.png"
             alt="Music & Smiles"
+            width={1109}
+            height={990}
+            sizes="(min-width: 640px) 108px, 90px"
             className="h-20 w-auto sm:h-24"
           />
           <p className="mt-5 font-display text-2xl text-white">{site.tagline}</p>
@@ -114,7 +118,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Music & Smiles</p>
         </div>
       </div>
-      <div className="border-t border-white/10">
+      <div className="cta-bar-clearance border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-3 text-center text-sm sm:px-6">
           <a
             href="https://www.fishtownwebdesign.com/charity"

@@ -30,7 +30,7 @@ const programs = [
     color: "text-orange",
     tint: "bg-orange/10",
     image: "/images/drumming-rhythm.jpg",
-    alt: "Teens playing djembe drums together in a circle",
+    alt: "Children and teens sitting in a circle playing hand drums and laughing together",
   },
   {
     title: "Instrument Exploration",
@@ -39,7 +39,7 @@ const programs = [
     color: "text-purple",
     tint: "bg-purple/10",
     image: "/images/instrument-exploration.jpg",
-    alt: "Teens exploring keyboard, guitar, xylophone, and drums",
+    alt: "Children and teens trying out a keyboard, xylophone, tambourines, and shakers together",
   },
   {
     title: "Friendship & Social Activities",
@@ -48,7 +48,7 @@ const programs = [
     color: "text-pink",
     tint: "bg-pink/10",
     image: "/images/friendship.jpg",
-    alt: "Teens sitting in a circle stacking their hands together",
+    alt: "Children and teens sitting in a circle passing a tambourine and clapping together",
   },
 ];
 
@@ -72,17 +72,17 @@ export default function HomePage() {
 
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
           <div data-reveal>
-            <p className="text-xs font-extrabold tracking-[0.28em] text-teal uppercase">
+            <p className="text-sm font-extrabold tracking-[0.28em] text-teal uppercase sm:text-base">
               Welcome to
             </p>
-            <p className="text-brand-gradient mt-1 font-display text-4xl leading-none font-bold sm:text-5xl lg:text-6xl">
+            <h1 className="text-brand-gradient mt-1 font-display text-[clamp(2.25rem,11vw,3rem)] leading-[1.05] font-bold sm:text-6xl xl:text-7xl">
               Music &amp; Smiles
-            </p>
-            <h1 className="mt-5 font-display text-4xl leading-[1.08] text-navy sm:text-5xl lg:text-6xl">
-              Every child deserves a place where they{" "}
-              <span className="text-brand-gradient">belong.</span>
             </h1>
             <SmileMark className="mt-4 h-8 w-36 text-navy" />
+            <p className="mt-5 font-display text-2xl leading-[1.15] text-navy sm:text-3xl lg:text-4xl">
+              Every child deserves a place where they{" "}
+              <span className="text-brand-gradient">belong.</span>
+            </p>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
               We create joyful, inclusive musical experiences for children and
               teens with special needs. Through music, movement, and friendship,
@@ -202,8 +202,7 @@ export default function HomePage() {
               poster="/images/anna-video-poster.jpg"
               className="aspect-[9/16] w-full bg-navy object-cover"
             >
-              <source src="/video/anna-story.mov" type="video/quicktime" />
-              <source src="/video/anna-story.mov" type="video/mp4" />
+              <source src="/video/anna-story.mp4" type="video/mp4" />
             </video>
           </div>
 
@@ -266,7 +265,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl scroll-mt-32 px-4 py-16 sm:px-6 sm:py-20">
+      <section id="contact" className="mx-auto max-w-6xl scroll-mt-32 px-4 py-16 pb-28 sm:px-6 sm:py-20 md:pb-20">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="text-xs font-extrabold tracking-[0.28em] text-teal uppercase">

@@ -25,7 +25,21 @@ export function MotionRoot() {
     );
 
     els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+
+    // Safety net: [data-reveal] starts at opacity 0, so anything that never gets
+    // an intersection callback would stay invisible. Reveal the stragglers.
+    const failsafe = window.setTimeout(() => {
+      els.forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+          el.classList.add("is-in");
+        }
+      });
+    }, 1200);
+
+    return () => {
+      window.clearTimeout(failsafe);
+      io.disconnect();
+    };
   }, [pathname]);
 
   return null;

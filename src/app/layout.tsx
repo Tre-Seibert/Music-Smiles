@@ -72,7 +72,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${nunito.variable} ${fraunces.variable} h-full`}>
-      <body className="min-h-full overflow-x-hidden bg-cream pb-20 font-sans text-ink antialiased md:pb-0">
+      <body className="min-h-full overflow-x-hidden bg-cream pb-24 font-sans text-ink antialiased md:pb-0">
+        <noscript>
+          <style>{`[data-reveal]{opacity:1 !important;transform:none !important}`}</style>
+        </noscript>
         <a href="#main" className="skip-link">
           Skip to main content
         </a>

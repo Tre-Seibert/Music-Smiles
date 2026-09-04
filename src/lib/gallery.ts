@@ -16,29 +16,28 @@ export const gallery: GalleryItem[] = [
     caption: "Anna Levitskiy, founder",
   },
   {
-    src: "/images/instruments.jpg",
-    alt: "Colorful musical instruments ready to be explored",
+    src: "/images/music-play-days.jpg",
+    alt: "Children and teens waving colorful scarves and shaking tambourines together",
+    caption: "Music play days",
+  },
+  {
+    src: "/images/drumming-rhythm.jpg",
+    alt: "Children and teens sitting in a circle playing hand drums and laughing together",
+    caption: "Drumming & rhythm",
+  },
+  {
+    src: "/images/instrument-exploration.jpg",
+    alt: "Children and teens trying out a keyboard, xylophone, tambourines, and shakers together",
     caption: "Instrument exploration",
   },
   {
-    src: "/images/drums.jpg",
-    alt: "Drumming and rhythm",
-    caption: "Drumming & rhythm",
-    imageClass: "object-top",
+    src: "/images/singing-together.jpg",
+    alt: "Children and teens singing together, arms around each other, mid-song",
+    caption: "Singing & movement",
   },
   {
-    src: "/images/dance.jpg",
-    alt: "Dancing and movement",
-    caption: "Dancing & movement",
-  },
-  {
-    src: "/images/piano-keys.jpg",
-    alt: "Piano keys in warm light",
-    caption: "Music at the heart",
-  },
-  {
-    src: "/images/kids-play.jpg",
-    alt: "Children playing together",
+    src: "/images/friendship.jpg",
+    alt: "Children and teens sitting in a circle passing a tambourine and clapping together",
     caption: "Friendship & play",
   },
 ];

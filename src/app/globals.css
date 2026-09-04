@@ -43,6 +43,14 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keep focused fields / in-page anchors clear of the fixed mobile CTA bar. */
+  scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-bottom: 0;
+  }
 }
 
 body {
@@ -57,6 +65,17 @@ body {
 
 .font-display {
   font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+/* Extra footer clearance so the last credit line isn't tucked under the bar. */
+.cta-bar-clearance {
+  padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .cta-bar-clearance {
+    padding-bottom: 0;
+  }
 }
 
 .skip-link {

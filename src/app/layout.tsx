@@ -26,23 +26,17 @@ export const metadata: Metadata = {
   },
   description:
     "Joyful, inclusive musical experiences for children and teens with special needs throughout Philadelphia, Bucks and Montgomery Counties, PA.",
-  metadataBase: new URL("https://musicandsmiles.fishtownweb.com"),
+  metadataBase: new URL(site.url),
   robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
-    },
+    index: true,
+    follow: true,
   },
   openGraph: {
     title: "Music & Smiles",
     description:
       "Every child deserves a place where they feel accepted, included, and celebrated.",
     type: "website",
-    url: "https://musicandsmiles.fishtownweb.com",
+    url: site.url,
     images: [
       {
         url: "/images/og.png",
@@ -95,7 +89,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               telephone: site.phone,
               slogan: site.tagline,
               areaServed: "Philadelphia, Bucks and Montgomery Counties, Pennsylvania",
-              url: "https://musicandsmiles.fishtownweb.com",
+              url: site.url,
             }),
           }}
         />

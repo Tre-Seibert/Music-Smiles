@@ -1,6 +1,7 @@
 export const site = {
   name: "Music & Smiles",
   tagline: "Play. Connect. Belong.",
+  url: "https://musicandsmiles.org",
   email: "hello@musicandsmiles.org",
   phone: "2158767382",
   phoneDisplay: "(215) 876-7382",

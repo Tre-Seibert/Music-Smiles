@@ -15,6 +15,7 @@ export const site = {
     register: "https://forms.gle/QRtf8SVGgCebZFBQ6",
     volunteer: "https://forms.gle/9RBe2ZCo3ieqi8cb9",
     donate: "/get-involved#donate",
+    givebutter: "https://givebutter.com/music-and-smiles-org",
     volunteerPage: "/get-involved#volunteer",
     events: "/get-involved#events",
     gallery: "/get-involved#gallery",
